@@ -1,0 +1,164 @@
+/* Custom Luxury Theme */
+:root {
+    --bg-color: #0a0a0a;
+    --accent: #d4af37; /* Champagne Gold */
+    --text-main: #ffffff;
+    --text-dim: #a0a0a0;
+    --border: rgba(212, 175, 55, 0.3);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    font-family: 'Inter', -apple-system, sans-serif;
+    line-height: 1.6;
+}
+
+/* Typography */
+h1, h2, .logo {
+    font-family: 'Playfair Display', serif; /* Classic Luxury Font */
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+/* Navigation */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 8%;
+    border-bottom: 1px solid var(--border);
+}
+
+.logo { font-size: 1.5rem; color: var(--accent); }
+
+nav ul { display: flex; list-style: none; }
+
+nav ul li { margin-left: 40px; }
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--text-main);
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    transition: 0.3s;
+}
+
+nav ul li a:hover { color: var(--accent); }
+
+/* Layout Containers */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 80px 20px;
+}
+
+/* Hero Section */
+.hero {
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: radial-gradient(circle, #1a1a1a 0%, #0a0a0a 100%);
+}
+
+.hero h1 { font-size: 3.5rem; margin-bottom: 20px; }
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 15px 40px;
+    border: 1px solid var(--accent);
+    color: var(--accent);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 0.7rem;
+    letter-spacing: 2px;
+    transition: all 0.4s ease;
+}
+
+.btn:hover {
+    background: var(--accent);
+    color: var(--bg-color);
+}
+
+/* Forms */
+input, textarea {
+    width: 100%;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid var(--border);
+    color: white;
+    padding: 15px 0;
+    margin-bottom: 30px;
+    font-family: inherit;
+}
+
+footer {
+    text-align: center;
+    padding: 50px;
+    font-size: 0.7rem;
+    color: var(--text-dim);
+    letter-spacing: 1px;
+}
+
+/* Search Container */
+.search-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-left: 20px;
+}
+
+.search-input {
+    width: 0;
+    padding: 0;
+    border: none;
+    border-bottom: 1px solid var(--accent);
+    background: transparent;
+    color: var(--white);
+    transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1), padding 0.3s;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    outline: none;
+}
+
+/* Luxury Hover Effect: The bar expands when the container is hovered */
+.search-container:hover .search-input,
+.search-input:focus {
+    width: 180px;
+    padding: 5px 10px;
+}
+
+.search-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--accent);
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+}
+
+.search-btn:hover {
+    transform: scale(1.1);
+}
+
+/* SVG Icon Size */
+.search-btn svg {
+    width: 18px;
+    height: 18px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2;
+}
