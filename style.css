@@ -1,3 +1,4 @@
+
 /* --- Custom Luxury Theme Variables --- */
 :root {
     --bg-color: #0a0a0a;
@@ -227,47 +228,4 @@ footer {
     letter-spacing: 1px;
     position: relative;
     z-index: 10;
-}
-
-.side-cart-container {
-  position: fixed;   /* Naka-fix sa screen kahit mag-scroll */
-  left: 0;           /* Ididikit sa kaliwa */
-  top: 50%;          /* Sa gitna ng height ng screen */
-  transform: translateY(-50%); /* Center alignment */
-  z-index: 1000;     /* Para laging nasa ibabaw */
-}
-
-.add-to-cart-btn {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 15px 10px;
-  background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black */
-  border: 1px solid #D4AF37;           /* Gold border */
-  border-left: none;                   /* Tanggalin ang border sa dikit sa wall */
-  color: #D4AF37;                      /* Gold text */
-  cursor: pointer;
-  transition: all 0.3s ease;
-  border-radius: 0 5px 5px 0;          /* Rounded corners sa dulo lang */
-}
-
-.add-to-cart-btn .icon {
-  font-size: 20px;
-  margin-bottom: 5px;
-}
-
-.add-to-cart-btn .text {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 10px;
-  font-weight: bold;
-  letter-spacing: 1px;
-  writing-mode: vertical-rl;           /* Patayo ang text para tipid sa space */
-  text-orientation: mixed;
-}
-
-/* Hover Effect */
-.add-to-cart-btn:hover {
-  background-color: #D4AF37;           /* Magiging gold ang background */
-  color: #000;                         /* Magiging black ang text */
-  padding-left: 20px;                  /* Bahagyang luluwang kapag tinapatan */
 }
