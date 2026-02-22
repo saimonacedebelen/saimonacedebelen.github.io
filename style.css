@@ -230,82 +230,113 @@ footer {
     z-index: 10;
 }
 
-.products-section {
-  padding: 80px 10%;
-  background-color: #000;
+/* Section Wrapper */
+.product-gallery {
+  background-color: #000; /* Deep Black background */
+  padding: 100px 5%;
+  color: #fff;
   text-align: center;
 }
 
-.section-title {
+.gallery-header {
+  margin-bottom: 60px;
+}
+
+.gold-subtitle {
   color: #D4AF37;
-  font-family: 'Playfair Display', serif;
-  letter-spacing: 5px;
-  font-size: 28px;
-  margin-bottom: 50px;
-}
-
-.product-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 40px;
-}
-
-.product-card {
-  background: #0a0a0a;
-  padding: 20px;
-  border: 1px solid #1a1a1a;
-  transition: border 0.3s ease;
-}
-
-.product-card:hover {
-  border-color: #D4AF37;
-}
-
-.product-image {
-  position: relative;
-  overflow: hidden;
-  margin-bottom: 20px;
-}
-
-.product-image img {
-  width: 100%;
-  height: auto;
-  transition: transform 0.5s ease;
-}
-
-.product-card:hover .product-image img {
-  transform: scale(1.1); /* Zoom effect on hover */
-}
-
-/* Hidden Add to Cart Button */
-.quick-add {
-  position: absolute;
-  bottom: -50px; /* Hidden initially */
-  left: 0;
-  width: 100%;
-  padding: 15px;
-  background: rgba(212, 175, 55, 0.9);
-  color: #000;
-  border: none;
-  font-weight: bold;
-  letter-spacing: 2px;
-  cursor: pointer;
-  transition: bottom 0.3s ease;
-}
-
-.product-card:hover .quick-add {
-  bottom: 0; /* Slides up on hover */
-}
-
-.product-info h3 {
-  color: #fff;
   font-family: 'Montserrat', sans-serif;
-  font-size: 16px;
-  letter-spacing: 1px;
+  letter-spacing: 4px;
+  font-size: 12px;
   margin-bottom: 10px;
 }
 
-.product-info .price {
+.gallery-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 32px;
+  letter-spacing: 6px;
+  font-weight: 300;
+}
+
+/* Grid Layout */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+}
+
+/* Product Card */
+.watch-card {
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.watch-image-container {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid #1a1a1a;
+  background: #0d0d0d;
+}
+
+.watch-image-container img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+  filter: grayscale(20%);
+}
+
+/* Hover Effects */
+.watch-card:hover img {
+  transform: scale(1.05);
+}
+
+.hover-overlay {
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.watch-card:hover .hover-overlay {
+  opacity: 1;
+}
+
+/* Gold Button */
+.add-to-cart-gold {
+  background: none;
+  border: 1px solid #D4AF37;
+  color: #D4AF37;
+  padding: 12px 30px;
+  font-size: 12px;
+  letter-spacing: 2px;
+  transition: all 0.3s ease;
+}
+
+.add-to-cart-gold:hover {
+  background: #D4AF37;
+  color: #000;
+  box-shadow: 0 0 15px rgba(212, 175, 55, 0.4);
+}
+
+/* Text Meta */
+.watch-meta {
+  padding-top: 20px;
+}
+
+.watch-name {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  letter-spacing: 2px;
+  margin-bottom: 8px;
+  color: #eee;
+}
+
+.watch-price {
   color: #D4AF37;
   font-weight: bold;
+  font-size: 16px;
 }
