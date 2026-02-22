@@ -28,35 +28,72 @@ h1, h2, .logo {
 }
 
 /* Navigation */
+/* LUXURY HEADER NAV STYLING */
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 30px 8%;
-    border-bottom: 1px solid var(--border);
+    padding: 40px 10%; /* Increased vertical breathing room */
+    background-color: #0a0a0a;
+    border-bottom: 1px solid rgba(212, 175, 55, 0.15); /* Very subtle gold line */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
-.logo { font-size: 1.5rem; color: var(--accent); }
+/* NAVIGATION LINKS */
+.nav-links {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    gap: 50px; /* Wider gap between links looks more premium */
+}
 
-nav ul { display: flex; list-style: none; }
-
-nav ul li { margin-left: 40px; }
-
-nav ul li a {
+.nav-links li a {
     text-decoration: none;
-    color: var(--text-main);
-    font-size: 0.8rem;
-    letter-spacing: 1px;
-    transition: 0.3s;
+    color: #ffffff;
+    font-size: 0.75rem; /* Smaller text is often used in luxury for sophistication */
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 4px; /* Extreme tracking is the hallmark of luxury design */
+    transition: all 0.4s ease;
+    position: relative;
+    opacity: 0.8;
 }
 
-nav ul li a:hover { color: var(--accent); }
+/* LUXURY HOVER EFFECT */
+.nav-links li a:hover {
+    color: #d4af37; /* Champagne Gold */
+    opacity: 1;
+}
 
-/* Layout Containers */
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 80px 20px;
+/* Subtle underline reveal on hover */
+.nav-links li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 1px;
+    bottom: -8px;
+    left: 0;
+    background-color: #d4af37;
+    transition: width 0.4s ease;
+}
+
+.nav-links li a:hover::after {
+    width: 100%;
+}
+
+/* LOGO SPECIFIC ADJUSTMENT */
+.logo-img {
+    height: 100px; /* Adjusting for your "Lakihan mo pa" request */
+    width: auto;
+    filter: drop-shadow(0 0 5px rgba(212, 175, 55, 0.2));
+    transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.logo-img:hover {
+    transform: scale(1.05);
+}
 }
 
 /* Hero Section */
@@ -196,6 +233,7 @@ nav {
     font-size: 1.1rem; 
     letter-spacing: 3px;
 }
+
 
 
 
