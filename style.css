@@ -164,52 +164,53 @@ footer {
 
 }
 
-/* Container para sa Logo at Text */
-.logo-wrapper {
+/* Buong Navigation Bar */
+.navbar {
   display: flex;
-  align-items: center; /* Para pantay ang taas nila */
-  gap: 15px;           /* Patlang sa pagitan ng logo at text */
+  justify-content: space-between; /* Logo sa kaliwa, Menu sa kanan */
+  align-items: center;
+  padding: 15px 40px;
+  background-color: #000; /* Dark background para sa luxury feel */
 }
 
-.brand-logo {
-  height: 50px;        /* I-adjust base sa laki ng logo mo */
+/* Container para magkatabi ang Logo at Text */
+.brand-container {
+  display: flex;
+  align-items: center; /* Pantay ang gitna ng logo at text */
+  gap: 15px;           /* Space sa pagitan ng logo at text */
+}
+
+.logo-img {
+  height: 45px;        /* I-adjust depende sa laki ng logo mo */
   width: auto;
 }
 
 /* Gold Text Styling */
 .brand-name {
-  font-family: 'Serif', Georgia, serif; /* Para mukhang luxury/classy */
-  font-size: 24px;
-  font-weight: bold;
-  letter-spacing: 2px;
+  color: #D4AF37;      /* Gold color */
+  font-family: 'Playfair Display', serif; /* Classy font */
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
   margin: 0;
+  text-transform: uppercase;
   
-  /* Gold Color Gradient Effect */
-  color: #D4AF37; /* Standard Gold */
-  background: linear-gradient(to bottom, #CF995F 22%, #F1DEAC 45%, #E5B558 50%, #B68D4C 70%, #906228 100%);
+  /* Optional: Metallic Effect */
+  background: linear-gradient(to right, #bf953f, #fcf6ba, #b38728, #fbf5b7, #aa771c);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  text-shadow: 0px 1px 1px rgba(255,255,255,0.3);
 }
 
-/* Navbar Layout */
-.navbar {
+/* Menu links styling */
+.nav-menu {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 50px;
-  background-color: #000; /* Dark background para lumitaw ang gold */
-}
-
-.nav-links {
   list-style: none;
-  display: flex;
-  gap: 20px;
+  gap: 25px;
 }
 
-.nav-links a {
-  color: #fff;
+.nav-menu a {
+  color: #ffffff;
   text-decoration: none;
-  text-transform: uppercase;
   font-size: 14px;
+  letter-spacing: 1px;
 }
