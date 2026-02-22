@@ -186,39 +186,42 @@ nav {
     border-bottom: 1px solid var(--border);
 }
 
-/* Video Container */
+/* Nilalagay nito ang video sa likod ng lahat */
 .video-background {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    height: 100vh;
-    z-index: -1; /* Sinisiguro nitong nasa likod siya ng lahat */
+    height: 100%;
+    z-index: -1; /* Ito ang "magic" para mapunta siya sa likod */
     overflow: hidden;
 }
 
-#hero-video {
-    width: 100%;
-    height: 100%;
+.video-background video {
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Sinisiguro nitong laging centered ang video */
     object-fit: cover; /* Parang background-size: cover */
-    filter: brightness(0.4); /* Pinapaitim ang video para lumutang ang text */
+    filter: brightness(0.5); /* Pinapaitim natin para mabasa ang puting text mo */
 }
 
-/* Optional: Gradient Overlay para sa mas premium na look */
+/* Optional: Overlay para mas magmukhang premium */
 .video-overlay {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to bottom, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.8) 100%);
+    background: rgba(0, 0, 0, 0.4); /* Tinted glass effect */
 }
 
-/* Siguraduhin na transparent ang Hero section mo para makita ang video */
-.hero {
+/* Siguraduhin na transparent ang background ng Nav at Hero */
+nav, .hero {
     background: transparent !important;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
+
