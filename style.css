@@ -166,7 +166,7 @@ footer {
 
 /* Logo Styling */
 .logo-img {
-    height: 60px; /* Adjust this height to make your logo look just right */
+    height: 80px; /* Adjust this height to make your logo look just right */
     width: auto;  /* This keeps the proportions correct so it doesn't stretch */
     display: block;
     transition: opacity 0.3s ease;
@@ -185,4 +185,5 @@ nav {
     background-color: var(--bg-color);
     border-bottom: 1px solid var(--border);
 }
+
 
