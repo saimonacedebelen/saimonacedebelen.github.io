@@ -230,113 +230,103 @@ footer {
     z-index: 10;
 }
 
-/* Section Wrapper */
-.product-gallery {
-  background-color: #000; /* Deep Black background */
+/* Container for the whole page */
+.watch-page-section {
+  background-color: #000;
   padding: 100px 5%;
-  color: #fff;
+  min-height: 100vh;
   text-align: center;
 }
 
-.gallery-header {
-  margin-bottom: 60px;
-}
-
-.gold-subtitle {
+/* Header within the page */
+.exclusive-title {
   color: #D4AF37;
-  font-family: 'Montserrat', sans-serif;
-  letter-spacing: 4px;
-  font-size: 12px;
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  letter-spacing: 5px;
   margin-bottom: 10px;
 }
 
-.gallery-title {
-  font-family: 'Playfair Display', serif;
-  font-size: 32px;
-  letter-spacing: 6px;
-  font-weight: 300;
+.gold-divider {
+  width: 60px;
+  height: 2px;
+  background-color: #D4AF37;
+  margin: 0 auto 50px;
 }
 
-/* Grid Layout */
-.product-grid {
+/* The Product Grid */
+.watch-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 40px;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-/* Product Card */
+/* Individual Watch Card */
 .watch-card {
-  transition: transform 0.3s ease;
-  cursor: pointer;
-}
-
-.watch-image-container {
-  position: relative;
-  overflow: hidden;
+  background: #0d0d0d; /* Slightly lighter black than background */
   border: 1px solid #1a1a1a;
-  background: #0d0d0d;
-}
-
-.watch-image-container img {
-  width: 100%;
-  height: 400px;
-  object-fit: cover;
-  transition: transform 0.5s ease;
-  filter: grayscale(20%);
-}
-
-/* Hover Effects */
-.watch-card:hover img {
-  transform: scale(1.05);
-}
-
-.hover-overlay {
-  position: absolute;
-  top: 0; left: 0; width: 100%; height: 100%;
-  background: rgba(0, 0, 0, 0.7);
+  padding: 40px 20px;
+  transition: all 0.4s ease-in-out;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.watch-card:hover {
+  border-color: #D4AF37;
+  transform: translateY(-10px);
+  box-shadow: 0 10px 30px rgba(212, 175, 55, 0.1);
+}
+
+/* Image Holder - critical for visibility */
+.watch-img-container {
+  height: 250px;
+  display: flex;
   align-items: center;
-  opacity: 0;
-  transition: opacity 0.3s ease;
+  justify-content: center;
+  margin-bottom: 30px;
 }
 
-.watch-card:hover .hover-overlay {
-  opacity: 1;
+.watch-img-container img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain; /* Para hindi ma-stretch ang relo */
+  filter: drop-shadow(0 5px 15px rgba(0,0,0,0.5));
 }
 
-/* Gold Button */
-.add-to-cart-gold {
-  background: none;
-  border: 1px solid #D4AF37;
-  color: #D4AF37;
-  padding: 12px 30px;
-  font-size: 12px;
-  letter-spacing: 2px;
-  transition: all 0.3s ease;
-}
-
-.add-to-cart-gold:hover {
-  background: #D4AF37;
-  color: #000;
-  box-shadow: 0 0 15px rgba(212, 175, 55, 0.4);
-}
-
-/* Text Meta */
-.watch-meta {
-  padding-top: 20px;
-}
-
-.watch-name {
+/* Product Text Info */
+.watch-info h3 {
+  color: #fff;
   font-family: 'Montserrat', sans-serif;
-  font-size: 14px;
-  letter-spacing: 2px;
-  margin-bottom: 8px;
-  color: #eee;
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
 }
 
-.watch-price {
+.price {
   color: #D4AF37;
   font-weight: bold;
-  font-size: 16px;
+  font-size: 1.2rem;
+  margin-bottom: 25px;
 }
+
+/* Gold Action Button */
+.add-cart-btn {
+  background-color: transparent;
+  border: 1px solid #D4AF37;
+  color: #D4AF37;
+  padding: 12px 25px;
+  cursor: pointer;
+  letter-spacing: 2px;
+  font-weight: bold;
+  transition: 0.3s;
+  width: 100%;
+}
+
+.add-cart-btn:hover {
+  background-color: #D4AF37;
+  color: #000;
+}
+
