@@ -1,13 +1,14 @@
-
-/* Custom Luxury Theme */
+/* --- Custom Luxury Theme Variables --- */
 :root {
     --bg-color: #0a0a0a;
     --accent: #d4af37; /* Champagne Gold */
     --text-main: #ffffff;
     --text-dim: #a0a0a0;
     --border: rgba(212, 175, 55, 0.3);
+    --white: #ffffff;
 }
 
+/* --- Global Reset --- */
 * {
     margin: 0;
     padding: 0;
@@ -19,27 +20,90 @@ body {
     color: var(--text-main);
     font-family: 'Inter', -apple-system, sans-serif;
     line-height: 1.6;
+    overflow-x: hidden;
 }
 
-/* Typography */
-h1, h2, .logo {
+/* --- Typography --- */
+h1, h2, .logo-brand-name {
     font-family: 'Playfair Display', serif; /* Classic Luxury Font */
     letter-spacing: 2px;
     text-transform: uppercase;
 }
 
-/* Navigation */
+/* --- Background Video System --- */
+.video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; 
+    overflow: hidden;
+}
+
+.video-background video {
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+    filter: brightness(0.5); 
+}
+
+.video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4); 
+}
+
+/* --- Navigation Bar --- */
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 30px 8%;
+    padding: 20px 8%;
+    background: transparent !important; /* Transparent para makita ang video */
     border-bottom: 1px solid var(--border);
+    position: relative;
+    z-index: 10;
 }
 
-.logo { font-size: 1.5rem; color: var(--accent); }
+/* Logo & Brand Name Alignment */
+.logo-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    gap: 20px;
+}
 
-nav ul { display: flex; list-style: none; }
+.logo-img {
+    height: 80px; 
+    width: auto;
+    display: block;
+    transition: opacity 0.3s ease;
+}
+
+.logo-brand-name {
+    color: var(--accent);
+    font-size: 1.6rem;
+    font-weight: 700;
+    letter-spacing: 4px;
+    text-decoration: none;
+}
+
+/* Navigation Links */
+nav ul { 
+    display: flex; 
+    list-style: none; 
+    align-items: center;
+}
 
 nav ul li { margin-left: 40px; }
 
@@ -49,69 +113,12 @@ nav ul li a {
     font-size: 0.8rem;
     letter-spacing: 1px;
     transition: 0.3s;
+    text-transform: uppercase;
 }
 
 nav ul li a:hover { color: var(--accent); }
 
-/* Layout Containers */
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 80px 20px;
-}
-
-/* Hero Section */
-.hero {
-    height: 80vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    background: radial-gradient(circle, #1a1a1a 0%, #0a0a0a 100%);
-}
-
-.hero h1 { font-size: 3.5rem; margin-bottom: 20px; }
-
-/* Buttons */
-.btn {
-    display: inline-block;
-    padding: 15px 40px;
-    border: 1px solid var(--accent);
-    color: var(--accent);
-    text-decoration: none;
-    text-transform: uppercase;
-    font-size: 0.7rem;
-    letter-spacing: 2px;
-    transition: all 0.4s ease;
-}
-
-.btn:hover {
-    background: var(--accent);
-    color: var(--bg-color);
-}
-
-/* Forms */
-input, textarea {
-    width: 100%;
-    background: transparent;
-    border: none;
-    border-bottom: 1px solid var(--border);
-    color: white;
-    padding: 15px 0;
-    margin-bottom: 30px;
-    font-family: inherit;
-}
-
-footer {
-    text-align: center;
-    padding: 50px;
-    font-size: 0.7rem;
-    color: var(--text-dim);
-    letter-spacing: 1px;
-}
-
-/* Search Container */
+/* --- Search Container --- */
 .search-container {
     display: flex;
     align-items: center;
@@ -132,7 +139,6 @@ footer {
     outline: none;
 }
 
-/* Luxury Hover Effect: The bar expands when the container is hovered */
 .search-container:hover .search-input,
 .search-input:focus {
     width: 180px;
@@ -151,66 +157,74 @@ footer {
     transition: transform 0.3s ease;
 }
 
-.search-btn:hover {
-    transform: scale(1.1);
-}
-
-/* SVG Icon Size */
 .search-btn svg {
     width: 18px;
     height: 18px;
     fill: none;
     stroke: currentColor;
     stroke-width: 2;
-
 }
 
-/* Container para sa Logo at Text */
-.logo-wrapper {
-  display: flex;
-  align-items: center; /* Para pantay ang taas nila */
-  gap: 15px;           /* Patlang sa pagitan ng logo at text */
+/* --- Layout & Sections --- */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 80px 20px;
 }
 
-.brand-logo {
-  height: 50px;        /* I-adjust base sa laki ng logo mo */
-  width: auto;
+.hero {
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: transparent !important;
 }
 
-/* Gold Text Styling */
-.brand-name {
-  font-family: 'Serif', Georgia, serif; /* Para mukhang luxury/classy */
-  font-size: 24px;
-  font-weight: bold;
-  letter-spacing: 2px;
-  margin: 0;
-  
-  /* Gold Color Gradient Effect */
-  color: #D4AF37; /* Standard Gold */
-  background: linear-gradient(to bottom, #CF995F 22%, #F1DEAC 45%, #E5B558 50%, #B68D4C 70%, #906228 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  text-shadow: 0px 1px 1px rgba(255,255,255,0.3);
+.hero h1 { 
+    font-size: 3.5rem; 
+    margin-bottom: 20px;
+    color: var(--text-main);
 }
 
-/* Navbar Layout */
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 50px;
-  background-color: #000; /* Dark background para lumitaw ang gold */
+/* --- Buttons --- */
+.btn {
+    display: inline-block;
+    padding: 15px 40px;
+    border: 1px solid var(--accent);
+    color: var(--accent);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 0.7rem;
+    letter-spacing: 2px;
+    transition: all 0.4s ease;
 }
 
-.nav-links {
-  list-style: none;
-  display: flex;
-  gap: 20px;
+.btn:hover {
+    background: var(--accent);
+    color: var(--bg-color);
 }
 
-.nav-links a {
-  color: #fff;
-  text-decoration: none;
-  text-transform: uppercase;
-  font-size: 14px;
+/* --- Forms --- */
+input, textarea {
+    width: 100%;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid var(--border);
+    color: white;
+    padding: 15px 0;
+    margin-bottom: 30px;
+    font-family: inherit;
+}
+
+/* --- Footer --- */
+footer {
+    text-align: center;
+    padding: 50px;
+    font-size: 0.7rem;
+    color: var(--text-dim);
+    letter-spacing: 1px;
+    position: relative;
+    z-index: 10;
 }
