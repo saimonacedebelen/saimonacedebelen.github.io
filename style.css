@@ -172,28 +172,17 @@ footer {
     transition: opacity 0.3s ease;
 }
 
-.logo-img {
-    /* Mula sa dating maliit na size, gawin nating 120px o higit pa */
-    height: 120px; 
-    
-    width: auto; 
-    display: block;
-    transition: transform 0.3s ease;
-    
-    /* Kung may sobrang space ang image file mo sa taas/baba, 
-       gamitin ito para ma-adjust ang posisyon */
-    margin: -10px 0; 
+.logo-img:hover {
+    opacity: 0.8; /* Subtle feedback when hovering */
 }
 
+/* Ensure the Nav Bar aligns everything vertically */
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* Lakihan ang padding (halimbawa: 40px sa taas at baba) */
-    padding: 40px 8%; 
+    padding: 20px 8%;
     background-color: var(--bg-color);
     border-bottom: 1px solid var(--border);
 }
-
-
 
