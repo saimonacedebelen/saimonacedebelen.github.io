@@ -165,37 +165,24 @@ footer {
 }
 
 /* Logo Styling */
-.logo-container {
-    text-decoration: none;
-    display: flex;
-    align-items: center;
+.logo-img {
+    height: 60px; /* Adjust this height to make your logo look just right */
+    width: auto;  /* This keeps the proportions correct so it doesn't stretch */
+    display: block;
     transition: opacity 0.3s ease;
 }
 
-.logo-container:hover {
-    opacity: 0.8;
+.logo-img:hover {
+    opacity: 0.8; /* Subtle feedback when hovering */
 }
 
-/* If using an image logo */
-.logo-img {
-    height: 40px; /* Adjust based on your logo's proportions */
-    width: auto;
-    filter: brightness(1.2); /* Makes gold/white logos pop on dark backgrounds */
-}
-
-/* If using text logo */
-.logo-text {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.8rem;
-    font-weight: 700;
-    color: var(--accent);
-    letter-spacing: 5px; /* Wide tracking is a hallmark of luxury brands */
-    text-transform: uppercase;
-}
-
-/* Ensure Nav Links stay aligned */
-.nav-links {
+/* Ensure the Nav Bar aligns everything vertically */
+nav {
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    list-style: none;
+    padding: 20px 8%;
+    background-color: var(--bg-color);
+    border-bottom: 1px solid var(--border);
 }
+
