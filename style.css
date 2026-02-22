@@ -161,4 +161,41 @@ footer {
     fill: none;
     stroke: currentColor;
     stroke-width: 2;
+
+}
+
+/* Logo Styling */
+.logo-container {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    transition: opacity 0.3s ease;
+}
+
+.logo-container:hover {
+    opacity: 0.8;
+}
+
+/* If using an image logo */
+.logo-img {
+    height: 40px; /* Adjust based on your logo's proportions */
+    width: auto;
+    filter: brightness(1.2); /* Makes gold/white logos pop on dark backgrounds */
+}
+
+/* If using text logo */
+.logo-text {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--accent);
+    letter-spacing: 5px; /* Wide tracking is a hallmark of luxury brands */
+    text-transform: uppercase;
+}
+
+/* Ensure Nav Links stay aligned */
+.nav-links {
+    display: flex;
+    align-items: center;
+    list-style: none;
 }
