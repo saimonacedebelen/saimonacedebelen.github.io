@@ -172,28 +172,31 @@ footer {
     transition: opacity 0.3s ease;
 }
 
+/* Sobrang laking logo para sa luxury impact */
 .logo-img {
-    /* Mula sa dating maliit na size, gawin nating 120px o higit pa */
-    height: 120px; 
-    
-    width: auto; 
+    height: 180px; /* Dati ay 60px o 80px lang, ngayon ay 180px na */
+    width: auto;   /* Importante ito para hindi mapatid o ma-stretch ang image */
     display: block;
-    transition: transform 0.3s ease;
-    
-    /* Kung may sobrang space ang image file mo sa taas/baba, 
-       gamitin ito para ma-adjust ang posisyon */
-    margin: -10px 0; 
+    margin: 0 auto; /* Sinisiguro nitong nasa gitna ang focus kung kailangan */
+    transition: all 0.4s ease;
 }
 
+/* Kailangang lumaki rin ang Nav Bar para magkasya ang dambuhalang logo */
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* Lakihan ang padding (halimbawa: 40px sa taas at baba) */
-    padding: 40px 8%; 
+    padding: 60px 8%; /* Dinamihan natin ang padding sa taas at baba (60px) */
     background-color: var(--bg-color);
-    border-bottom: 1px solid var(--border);
+    border-bottom: 2px solid var(--accent); /* Ginawa nating 2px para mas luntang ang gold line */
 }
+
+/* Optional: Kung gusto mong lumaki rin ang text ng menu para bumagay sa malaking logo */
+.nav-links li a {
+    font-size: 1.1rem; 
+    letter-spacing: 3px;
+}
+
 
 
 
