@@ -172,29 +172,29 @@ footer {
     transition: opacity 0.3s ease;
 }
 
-/* Update this specific section in your style.css */
 .logo-img {
-    /* Change this value to adjust the size */
-    height: 80px; 
+    /* Mula sa dating maliit na size, gawin nating 120px o higit pa */
+    height: 120px; 
     
-    width: auto; /* Keeps the logo from stretching */
+    width: auto; 
     display: block;
     transition: transform 0.3s ease;
     
-    /* Optional: If your logo image has extra empty space around it, 
-       you can use a negative margin to pull it closer to the edge */
+    /* Kung may sobrang space ang image file mo sa taas/baba, 
+       gamitin ito para ma-adjust ang posisyon */
     margin: -10px 0; 
 }
 
-/* Ensure the navigation bar has enough room for the larger logo */
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 8%; /* Adjust the 20px if you need more vertical space */
+    /* Lakihan ang padding (halimbawa: 40px sa taas at baba) */
+    padding: 40px 8%; 
     background-color: var(--bg-color);
     border-bottom: 1px solid var(--border);
 }
+
 
 
 
